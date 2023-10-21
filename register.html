@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <style>
+            h1{background-color:darkblue; text-align: center; color: darkorange;}
+            h2{background-color:darkblue;color: antiquewhite; text-align: center;}
+            p{text-align: center;text-shadow: 0cqb;font-size: xx-large;font-family: Georgia, 'Times New Roman', Times, serif;}
+        </style>
+    </head>
+    <body background="regis.jpg" style="background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
+        <h1>Bishop Appasamy College of Arts and Science</h1>
+        <p>COSMOS-2023</p>
+        <h2>Registration Form</h2>
+        <h3>
+        <form action="register.html" method="post">
+            <label aria-setsize="xx-large">Student name:</label>
+            <input type="text" required><br><br>
+            <label>College name:</label>
+            <input type="text"><br><br>
+            <label>Email ID:</label>
+            <input type="email" placeholder="name@server.com" required><br><br>
+            <label>Phone no:</label>
+            <input id="Phone" type="number" maxlength="13" placeholder="+91 8976345729" required><br><br>
+            <label>Age:</label>
+            <input id="ageRange" type="number" min="16" max="30" maxlength="2" required>
+            <script>
+                document.getElementById('ageRange').onkeypress = function(e)
+                {var ev = e||window.event;
+                if(ev.charCode < 16 || ev.charCode >30) {return false;}
+                else {return true;}}
+            </script><br><br>
+            <label>Gender:</label><h5>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label></h5>
+            <label for="event">Choose a Event:</label><h5>
+            <input type="checkbox" id="gdance" name="gdance" value="GDance">
+            <label for ="gdance">Group Dance</label><br>
+            <input type="checkbox" id="gsong" name="gsong" value="GSong">
+            <label for ="gsong">Group Song</label><br>
+            <input type="checkbox" id="song" name="song" value="Song">
+            <label for="song">Solo Song</label><br>
+            <input type="checkbox" id="dance" name="dance" value="dance">
+            <label for="dance">Solo Dance</label><br>
+            <input type="checkbox" id="web" name="web" value="web">
+            <label for="web">Web Designing</label><br>
+            <input type="checkbox" id="speech" name="speech" value="speech">
+            <label for="speech">Speech</label><br>
+            </h5>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </h3>
+    </body>
+</html>
